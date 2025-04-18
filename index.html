@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,64 +24,74 @@
 <body>
   <!-- Preloader -->
   <div id="loader">
-    <div id="loaderInner">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-      </div>
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
     </div>
   </div>
 
   <!-- Main Container -->
-  <div id="wrapper">
+  <div class="page-wrapper">
     <!-- Header -->
-    <header id="header">
-      <div class="header-container">
-        <div class="logo">
-          <a href="#wrapper">
-            <img src="images/logo.png" alt="Dillon Oeser Logo">
-          </a>
-        </div>
-        
-        <nav class="main-nav">
-          <button class="mobile-menu-btn" aria-label="Toggle Menu">
-            <i class="fas fa-bars"></i>
-          </button>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="#" class="logo-link">
+              <img src="images/logo.png" alt="Dillon Oeser Logo" class="logo-image">
+              <span class="logo-text">Dillon Oeser</span>
+            </a>
+          </div>
           
-          <ul class="nav-links">
-            <li><a class="nav-link" href="#about">About Me</a></li>
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-            <li><a class="nav-link resume-btn" href="Dillon_Oeser_Resume_2024.pdf">Résumé</a></li>
-          </ul>
-        </nav>
+          <nav class="nav">
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-list">
+              <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="Dillon_Oeser_Resume_2024.pdf" class="nav-link resume-btn">Résumé</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <div class="hero-slider">
-        <div class="hero-slide active" style="background-image: url('images/sliderImages/slide1.jpg')">
-          <div class="hero-overlay"></div>
-          <div class="hero-content">
-            <div class="hero-text">
-              <h1>Dillon Oeser</h1>
-              <h2>Cyber Security Engineer</h2>
-              <div class="location"><i class="fas fa-map-marker-alt"></i> Upstate, NY</div>
-              <div class="hero-buttons">
-                <a href="#about" class="btn primary-btn">Learn More</a>
-                <a href="mailto:dillon@dillonoeser.com" class="btn secondary-btn">Get In Touch</a>
-              </div>
+    <section class="hero" id="home">
+      <div class="hero-background">
+        <div class="glitch-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Dillon Oeser</h1>
+            <h2 class="hero-subtitle">Cyber Security Engineer</h2>
+            <div class="hero-location"><i class="fas fa-map-marker-alt"></i> Upstate, NY</div>
+            <div class="hero-actions">
+              <a href="#about" class="btn primary-btn">Learn More</a>
+              <a href="mailto:dillon@dillonoeser.com" class="btn secondary-btn">Get In Touch</a>
             </div>
           </div>
-        </div>
-      </div>
-      
-      <div class="terminal-effect">
-        <div class="terminal-content">
-          <span class="line"><span class="prompt">$</span> Analyzing security vulnerabilities...</span>
-          <span class="line"><span class="prompt">$</span> System hardening in progress...</span>
-          <span class="line"><span class="prompt">$</span> Network monitoring active...</span>
+          
+          <div class="terminal">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="terminal-btn close"></span>
+                <span class="terminal-btn minimize"></span>
+                <span class="terminal-btn maximize"></span>
+              </div>
+              <div class="terminal-title">security.sh</div>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line"><span class="prompt">$</span> <span class="command">Analyzing security vulnerabilities...</span></div>
+              <div class="terminal-line"><span class="prompt">$</span> <span class="command">System hardening in progress...</span></div>
+              <div class="terminal-line"><span class="prompt">$</span> <span class="command">Network monitoring active...</span></div>
+              <div class="terminal-line current"><span class="prompt">$</span> <span class="command-cursor">_</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -90,42 +100,44 @@
     <section id="about" class="section about-section">
       <div class="container">
         <div class="section-header">
-          <h2>About Me</h2>
-          <div class="cyber-divider">
-            <span></span>
-            <i class="fas fa-shield-alt"></i>
-            <span></span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider">
+            <span class="divider-line"></span>
+            <i class="fas fa-shield-alt divider-icon"></i>
+            <span class="divider-line"></span>
           </div>
         </div>
         
         <div class="about-content">
-          <div class="about-image">
-            <img src="images/logo.png" alt="Dillon Oeser">
+          <div class="about-image-container">
+            <div class="about-image-wrapper">
+              <img src="images/logo.png" alt="Dillon Oeser" class="about-image">
+            </div>
           </div>
           
-          <div class="about-text">
-            <h3>Hi, I'm Dillon Oeser</h3>
-            <p>I am a self driven and professional Information Technology Enthusiast based in Upstate, New York.</p>
-            <p>My areas of passion include Cyber Security and Systems Management. I invite you to reach out, I would love to see what I can bring to your organization.</p>
+          <div class="about-details">
+            <h3 class="about-name">Hi, I'm Dillon Oeser</h3>
+            <p class="about-desc">I am a self driven and professional Information Technology Enthusiast based in Upstate, New York.</p>
+            <p class="about-desc">My areas of passion include Cyber Security and Systems Management. I invite you to reach out, I would love to see what I can bring to your organization.</p>
             
-            <div class="contact-info">
-              <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <span>dillon@dillonoeser.com</span>
+            <div class="about-contact">
+              <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <span class="contact-text">dillon@dillonoeser.com</span>
               </div>
-              <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Upstate, New York</span>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <span class="contact-text">Upstate, New York</span>
               </div>
             </div>
             
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/dillon-oeser" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
+            <div class="about-social">
+              <a href="https://www.linkedin.com/in/dillon-oeser" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-linkedin social-icon"></i>
               </a>
             </div>
             
-            <div class="cta-buttons">
+            <div class="about-actions">
               <a href="Dillon_Oeser_Resume_2024.pdf" class="btn primary-btn">View Résumé</a>
               <a href="mailto:dillon@dillonoeser.com" class="btn secondary-btn">Contact Me</a>
             </div>
@@ -138,55 +150,71 @@
     <section id="skills" class="section skills-section">
       <div class="container">
         <div class="section-header">
-          <h2>Skills & Expertise</h2>
-          <div class="cyber-divider">
-            <span></span>
-            <i class="fas fa-code"></i>
-            <span></span>
+          <h2 class="section-title">Skills & Expertise</h2>
+          <div class="section-divider">
+            <span class="divider-line"></span>
+            <i class="fas fa-code divider-icon"></i>
+            <span class="divider-line"></span>
           </div>
         </div>
         
-        <div class="skills-content">
+        <div class="skills-container">
           <div class="skill-category">
-            <h3>Cyber Security</h3>
+            <h3 class="category-title">Cyber Security</h3>
             <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                <h4>Threat Detection</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-shield-alt skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Threat Detection</h4>
               </div>
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-lock"></i></div>
-                <h4>Network Security</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-lock skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Network Security</h4>
               </div>
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-user-shield"></i></div>
-                <h4>Security Auditing</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-user-shield skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Security Auditing</h4>
               </div>
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-bug"></i></div>
-                <h4>Vulnerability Assessment</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-bug skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Vulnerability Assessment</h4>
               </div>
             </div>
           </div>
           
           <div class="skill-category">
-            <h3>Systems Management</h3>
+            <h3 class="category-title">Systems Management</h3>
             <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-server"></i></div>
-                <h4>Server Administration</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-server skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Server Administration</h4>
               </div>
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                <h4>Network Infrastructure</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-network-wired skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Network Infrastructure</h4>
               </div>
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                <h4>Cloud Services</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-cloud skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Cloud Services</h4>
               </div>
-              <div class="skill-item">
-                <div class="skill-icon"><i class="fas fa-database"></i></div>
-                <h4>Data Center Operations</h4>
+              <div class="skill-card">
+                <div class="skill-icon-wrap">
+                  <i class="fas fa-database skill-icon"></i>
+                </div>
+                <h4 class="skill-title">Data Center Operations</h4>
               </div>
             </div>
           </div>
@@ -198,34 +226,34 @@
     <section id="contact" class="section contact-section">
       <div class="container">
         <div class="section-header">
-          <h2>Get In Touch</h2>
-          <div class="cyber-divider">
-            <span></span>
-            <i class="fas fa-envelope"></i>
-            <span></span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider">
+            <span class="divider-line"></span>
+            <i class="fas fa-envelope divider-icon"></i>
+            <span class="divider-line"></span>
           </div>
         </div>
         
-        <div class="contact-content">
-          <div class="contact-text">
-            <p>I'm currently exploring new opportunities in the cyber security field. Feel free to reach out if you'd like to discuss how I can contribute to your organization.</p>
+        <div class="contact-container">
+          <div class="contact-info">
+            <p class="contact-desc">I'm currently exploring new opportunities in the cyber security field. Feel free to reach out if you'd like to discuss how I can contribute to your organization.</p>
             
             <div class="contact-methods">
               <div class="contact-method">
-                <i class="fas fa-envelope"></i>
-                <h4>Email</h4>
-                <a href="mailto:dillon@dillonoeser.com">dillon@dillonoeser.com</a>
+                <i class="fas fa-envelope method-icon"></i>
+                <h4 class="method-title">Email</h4>
+                <a href="mailto:dillon@dillonoeser.com" class="method-link">dillon@dillonoeser.com</a>
               </div>
               
               <div class="contact-method">
-                <i class="fab fa-linkedin"></i>
-                <h4>LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/dillon-oeser" target="_blank">Connect with me</a>
+                <i class="fab fa-linkedin method-icon"></i>
+                <h4 class="method-title">LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/dillon-oeser" target="_blank" class="method-link">Connect with me</a>
               </div>
             </div>
           </div>
           
-          <div class="contact-cta">
+          <div class="contact-action">
             <a href="Dillon_Oeser_Resume_2024.pdf" class="btn primary-btn">Download Résumé</a>
           </div>
         </div>
@@ -236,38 +264,111 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <div class="footer-logo">
-            <img src="images/logo.png" alt="Dillon Oeser Logo">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="Dillon Oeser Logo" class="footer-logo">
+            <p class="footer-copyright">&copy; <span id="current-year">2024</span> Dillon Oeser. All rights reserved.</p>
           </div>
           
-          <div class="footer-links">
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="Dillon_Oeser_Resume_2024.pdf">Résumé</a></li>
+          <div class="footer-nav">
+            <ul class="footer-links">
+              <li class="footer-item"><a href="#about" class="footer-link">About</a></li>
+              <li class="footer-item"><a href="#skills" class="footer-link">Skills</a></li>
+              <li class="footer-item"><a href="#contact" class="footer-link">Contact</a></li>
+              <li class="footer-item"><a href="Dillon_Oeser_Resume_2024.pdf" class="footer-link">Résumé</a></li>
             </ul>
           </div>
-          
-          <div class="footer-social">
-            <a href="https://www.linkedin.com/in/dillon-oeser" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-        
-        <div class="footer-bottom">
-          <p>&copy; <span id="current-year"></span> Dillon Oeser. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
   </div>
 
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="js/main.js"></script>
   <script>
+    // Update current year
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Preloader
+    $(window).on('load', function() {
+      $('#loader').fadeOut(500);
+    });
+    
+    // Mobile menu toggle
+    $('.menu-toggle').on('click', function() {
+      $('.nav-list').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+    
+    // Smooth scrolling for anchor links
+    $('a[href^="#"]').on('click', function(e) {
+      if(this.hash !== '') {
+        e.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top - 70
+        }, 800);
+        
+        // Close mobile menu if open
+        $('.nav-list').removeClass('active');
+        $('.menu-toggle').removeClass('active');
+      }
+    });
+    
+    // Header scroll effect
+    $(window).on('scroll', function() {
+      if($(window).scrollTop() > 50) {
+        $('.header').addClass('scrolled');
+      } else {
+        $('.header').removeClass('scrolled');
+      }
+    });
+    
+    // Typing effect for terminal
+    const commands = [
+      'Scanning for vulnerabilities...',
+      'Analyzing network traffic...',
+      'Monitoring system logs...',
+      'Securing endpoints...',
+      'Building security defenses...'
+    ];
+    
+    let commandIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    
+    function typeEffect() {
+      const currentCommand = commands[commandIndex];
+      const cursor = document.querySelector('.command-cursor');
+      const commandSpan = cursor.previousElementSibling;
+      
+      if (!isDeleting && charIndex <= currentCommand.length) {
+        commandSpan.textContent = currentCommand.substring(0, charIndex);
+        charIndex++;
+        setTimeout(typeEffect, typingSpeed);
+      } else if (isDeleting && charIndex >= 0) {
+        commandSpan.textContent = currentCommand.substring(0, charIndex);
+        charIndex--;
+        setTimeout(typeEffect, typingSpeed / 2);
+      } else {
+        isDeleting = !isDeleting;
+        
+        if (!isDeleting) {
+          commandIndex = (commandIndex + 1) % commands.length;
+          setTimeout(typeEffect, 1500);
+        } else {
+          setTimeout(typeEffect, 1000);
+        }
+      }
+    }
+    
+    // Start typing effect
+    setTimeout(function() {
+      const commandSpan = document.createElement('span');
+      commandSpan.className = 'command';
+      document.querySelector('.command-cursor').parentNode.insertBefore(commandSpan, document.querySelector('.command-cursor'));
+      typeEffect();
+    }, 1500);
   </script>
 </body>
 </html>
